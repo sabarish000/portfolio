@@ -1,0 +1,17 @@
+<div class="container-fluid text-light bg-dark">
+  <div class="row">
+    <div class="col-md-3 col-sm-12 sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9 col-sm-12 main-content">
+      <app-navbar></app-navbar>
+      <div class="px-md-4">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active mp-2" role="tabpanel" aria-labelledby="about-tab">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

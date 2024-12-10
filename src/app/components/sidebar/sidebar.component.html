@@ -1,0 +1,42 @@
+<div class="d-flex flex-column p-3 sidebar" [class.collapsed]="!isSidebarActive">
+
+    <!-- Profile Section -->
+    <div class="text-center d-flex profile-section">
+      <div class="info-content">
+        <h1 class="fs-4 fw-bold text-white" title="Sabarish Karrothu">Sabarish Karrothu</h1>
+        <p>Senior Full-stack Engineer</p>
+      </div>
+  
+      <!-- Divider -->
+      <div class="border-top my-3"></div>
+  
+      <!-- Social Media Icons -->
+      <div class="d-flex justify-content-center gap-3 social-media">
+        <a class="text-white fs-4" href="https://www.linkedin.com/in/sabarish-karrothu-8765bb145/" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a class="text-white fs-4" href="https://github.com/sabarish000/" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class="text-white fs-4" href="https://leetcode.com/u/sabarish00/" target="_blank">
+          <i class="bi bi-code-square"></i>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Contact Info for Large Screens -->
+    <div class="d-none d-lg-block mt-3">
+        <!-- Hide/Show Button -->
+        <button class="btn btn-outline-light w-100 mb-3" (click)="toggleContactInfo()">
+            <span>{{ isContactInfoVisible ? 'Hide Contact Info' : 'Show Contact Info' }}</span>
+            <i [class]="'bi ' + (isContactInfoVisible ? 'bi-chevron-up' : 'bi-chevron-down')"></i>
+        </button>
+    
+        <!-- Contact Information -->
+        <div *ngIf="isContactInfoVisible">
+            <app-contact [hideHeading]="true"></app-contact>
+        </div>
+    </div>
+  
+  </div>
+  
