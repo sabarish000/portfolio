@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #007bff;
+}
+
+.nav-tabs .nav-link {
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #fff;
+  color: #007bff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 900px;
+}
+
+h2 {
+  color: #007bff;
+}

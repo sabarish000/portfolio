@@ -1,50 +1,47 @@
 <div class="container my-2">
-    <h3 class="text-center mb-2">My Professional Experiences</h3>
-  
+    <h3 class="text-center mb-2 fade-in-title">My Professional Experiences</h3>
+
     <!-- Tabs Navigation -->
-    <ul class="nav nav-tabs justify-content-center mb-4">
-      <li class="nav-item" *ngFor="let experience of experiences; let i = index">
-        <button 
-          class="nav-link" 
-          [class.active]="activeTabIndex === i" 
-          (click)="setActiveTab(i)">
-          {{ experience.company.name }}
-        </button>
-      </li>
-    </ul>
-  
-    <!-- Tabs Content -->
-    <div class="tab-content">
-      <div 
-        class="tab-pane fade show" 
-        [class.active]="activeTabIndex === i" 
-        *ngFor="let experience of experiences; let i = index">
-        
-        <div class="card experience-card shadow-sm">
-          <div class="card-header bg-dark text-white">
-            <h5 class="card-title">{{ experience.title }}</h5>
-            <a [href]="experience.company.website" target="_blank" class="company-name">
-              {{experience.company.name}}
-            </a>
-            <span *ngIf="experience.company.description"> | {{experience.company.description}}</span>
-          </div>
-          
-          <div class="card-body">
-            <p class="text-muted small">{{ experience.duration }}</p>
-            <p class="text-dark">{{ experience.shortDescription }}</p>
-  
-            <h6>Key Contributions:</h6>
-            <ul class="list-unstyled">
-              <li *ngFor="let point of experience.keyPoints">
-                <i class="bi bi-check-circle-fill text-success me-2"></i> {{ point }}
-              </li>
-            </ul>
-  
-            <h6>Achievements:</h6>
-            <p>{{ experience.achievements }}</p>
-          </div>
+    <section class="fade-in-up">
+
+        <ul class="nav nav-tabs justify-content-center mb-4">
+            <li class="nav-item" *ngFor="let experience of experiences; let i = index">
+                <button class="nav-link" [class.active]="activeTabIndex === i" (click)="setActiveTab(i)">
+                    {{ experience.company.name }}
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tabs Content -->
+        <div class="tab-content">
+            <div class="tab-pane fade show" [class.active]="activeTabIndex === i"
+                *ngFor="let experience of experiences; let i = index">
+
+                <div class="card experience-card shadow-sm">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="card-title">{{ experience.title }}</h5>
+                        <a [href]="experience.company.website" target="_blank" class="company-name">
+                            {{experience.company.name}}
+                        </a>
+                        <span *ngIf="experience.company.description"> | {{experience.company.description}}</span>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="text-muted small">{{ experience.duration }}</p>
+                        <p class="text-dark">{{ experience.shortDescription }}</p>
+
+                        <h6>Key Contributions:</h6>
+                        <ul class="list-unstyled">
+                            <li *ngFor="let point of experience.keyPoints">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i> {{ point }}
+                            </li>
+                        </ul>
+
+                        <h6>Achievements:</h6>
+                        <p>{{ experience.achievements }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
+    </section>
+</div>

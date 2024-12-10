@@ -9,19 +9,7 @@ import { ContactComponent } from "../contact/contact.component";
   styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
-  isSidebarActive = true;
-  isContactInfoVisible = false;
-  // innerWidth;
-
-  // @HostListener('window:resize', ['$event'])
-  // onResize(event) {
-  //   this.innerWidth = window.innerWidth;
-  //   console.log("innerWidth", this.innerWidth);
-  // }
-
-  toggleSidebar() {
-    this.isSidebarActive = !this.isSidebarActive;
-  }
+  isContactInfoVisible = true;
 
   toggleContactInfo() {
     this.isContactInfoVisible = !this.isContactInfoVisible;

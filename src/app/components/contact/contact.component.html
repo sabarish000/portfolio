@@ -1,4 +1,29 @@
-<h3 *ngIf="!hideHeading()">You can reach me on</h3>
+<section class="contact-section bg-dark">
+
+    <!-- Animated Heading -->
+    <h3 class="fade-in-title" *ngIf="!hideHeading()">
+        <i class="bi bi-chat-dots me-2"></i> You can reach me on
+    </h3>
+
+    <!-- Contact Info List -->
+    <ul class="contact-list list-unstyled mt-4">
+        <li class="contact-item fade-in-up" *ngFor="let contact of contactInfo">
+            <div class="icon-container" [class.icon-small]="hideHeading()">
+                <i [class]="contact.icon + ' contact-icon'"></i>
+            </div>
+            <div>
+                <p *ngIf="!hideHeading()" class="contact-title fw-bold mb-1">{{ contact.label }}</p>
+                <a *ngIf="contact.type === 'link'" [href]="contact.href" target="_blank"
+                    class="text-decoration-none contact-link">
+                    {{ contact.value }}
+                </a>
+                <p *ngIf="contact.type === 'text'" class="text-type">{{ contact.value }}</p>
+            </div>
+        </li>
+    </ul>
+
+</section>
+<!-- <h3 *ngIf="!hideHeading()">You can reach me on</h3>
 <ul class="list-unstyled">
   <li class="d-flex align-items-center mb-3">
     <i class="bi bi-envelope fs-4 me-3"></i>
@@ -31,4 +56,4 @@
       <address>Berlin, Germany</address>
     </div>
   </li>
-</ul>
+</ul> -->

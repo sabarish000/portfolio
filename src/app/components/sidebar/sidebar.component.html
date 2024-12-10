@@ -1,4 +1,4 @@
-<div class="d-flex flex-column p-3 sidebar" [class.collapsed]="!isSidebarActive">
+<div class="d-flex flex-column p-3 sidebar">
 
     <!-- Profile Section -->
     <div class="text-center d-flex profile-section">
@@ -6,6 +6,11 @@
         <h1 class="fs-4 fw-bold text-white" title="Sabarish Karrothu">Sabarish Karrothu</h1>
         <p>Senior Full-stack Engineer</p>
       </div>
+
+    <!-- Profile Image -->
+    <div class="text-center">
+        <img src="assets/images/profile.png" loading="lazy" alt="Sabarish Karrothu" class="profile-img rounded-circle shadow-lg">
+    </div>
   
       <!-- Divider -->
       <div class="border-top my-3"></div>
@@ -27,7 +32,7 @@
     <!-- Contact Info for Large Screens -->
     <div class="d-none d-lg-block mt-3">
         <!-- Hide/Show Button -->
-        <button class="btn btn-outline-light w-100 mb-3" (click)="toggleContactInfo()">
+        <button class="btn btn-outline-light w-100" (click)="toggleContactInfo()">
             <span>{{ isContactInfoVisible ? 'Hide Contact Info' : 'Show Contact Info' }}</span>
             <i [class]="'bi ' + (isContactInfoVisible ? 'bi-chevron-up' : 'bi-chevron-down')"></i>
         </button>
